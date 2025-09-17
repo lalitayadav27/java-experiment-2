@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class RhombusPattern {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char choice;
+
+        do {
+           
+            System.out.print("Enter the number of rows for the rhombus: ");
+            int rows = sc.nextInt();
+
+        System.out.println("Name: lalita");
+        System.out.println("Roll No.: 24csu278");
+        System.out.println("----------------------");
+
+
+            
+            for (int i = 1; i <= rows; i++) {
+               
+                for (int j = i; j < rows; j++) {
+                    System.out.print(" ");
+                }
+                
+                for (int k = 1; k <= (2 * i - 1); k++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+
+            
+            for (int i = rows - 1; i >= 1; i--) {
+                // spaces
+                for (int j = rows; j > i; j--) {
+                    System.out.print(" ");
+                }
+                
+                for (int k = 1; k <= (2 * i - 1); k++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+
+            
+            System.out.print("Do you want to try again? (Y/N): ");
+            choice = sc.next().charAt(0);
+
+        } while (choice != 'N' && choice != 'n');
+
+        System.out.println("Program exited. Goodbye!");
+        sc.close();
+    }
+}
